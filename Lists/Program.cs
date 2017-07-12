@@ -84,7 +84,7 @@ namespace Lists
             //{
             //    Console.WriteLine(number);
             //}
-            List<string> movies = new List<string> {"jay and silent bob", "mr. bill" };
+            List<string> movies = new List<string> {"jay and silent bob" , "mr. bill" };
             bool quite = false;
             do
             {
@@ -95,21 +95,22 @@ namespace Lists
                 {
                     Console.WriteLine("We got it!");
                 }
-                if (responseMovie == "esc")
-                {
-                    quite = true;
-                    Console.WriteLine("Movies being ordered and Movies we have:");
-                    foreach(string movie in movies)
-                    {
-                        Console.WriteLine(movie);
-                    }
-                }
+
                 else
                 {
                     Console.WriteLine("We are going to order that for you, hold tight.");
                     movies.Add(responseMovie);
                 }
-                
+                if (responseMovie == "esc")
+                {
+                    quite = true;
+                    Console.WriteLine("Movies being ordered and Movies we have:");
+                    foreach (string movie in movies)
+                    {
+                        Console.WriteLine(movie);
+                    }
+                }
+
             }
             while (quite == false);
         }
